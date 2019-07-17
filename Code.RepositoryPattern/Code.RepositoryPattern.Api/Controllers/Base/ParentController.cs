@@ -18,5 +18,11 @@ namespace Code.RepositoryPattern.Api.Controllers.Base
         {
             return Repository.GetAll();
         }
+
+        [HttpPost]
+        public void Add([FromBody] TModel item)
+        {
+             Repository.Add(item);
+        }        
     }
 }
